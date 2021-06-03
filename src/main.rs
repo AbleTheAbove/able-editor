@@ -41,9 +41,7 @@ impl App {
     pub fn new(args: Vec<String>) -> Self {
         let app = app::App::default().with_scheme(app::Scheme::Gtk);
         app::background(0, 0, 0);
-
         app::foreground(255, 255, 255);
-
         app::set_frame_type(fltk::enums::FrameType::NoBox);
 
         let (s, r) = app::channel::<Message>();

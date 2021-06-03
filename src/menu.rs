@@ -16,6 +16,7 @@ impl Menu {
 
         menu.set_text_color(Color::White);
         menu.set_color(Color::Black);
+
         menu.add_emit(
             "&File/New...\t",
             Shortcut::Ctrl | 'n',
