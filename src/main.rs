@@ -53,8 +53,8 @@ impl App {
             .with_size(800, 600)
             .center_screen()
             .with_label("AblEditor");
-
-        let image = fltk::image::PngImage::load("assets/icon.png").unwrap();
+        let ico = include_bytes!("../assets/icon.png");
+        let image = fltk::image::PngImage::from_data(ico).unwrap();
         main_win.set_icon(Some(image));
 
         let _menu = menu::Menu::new(&s);
